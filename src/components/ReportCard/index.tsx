@@ -1,5 +1,6 @@
 'use client'
 import React from 'react'
+import { useRouter } from 'next/navigation'
 import Image from 'next/image'
 import { Typography } from '../Typography'
 import { Button } from '../Button'
@@ -7,20 +8,29 @@ import * as S from './styles'
 
 interface IReportCardProps {
   title: string
-  description: string
+  content: string
   thumbnailUrl: string
   href: string
 }
 
 export const ReportCard = (props: IReportCardProps) => {
+  const router = useRouter()
+
+  const onClick = () => router.push(props.href)
+
   return (
-    <S.Container>
-      <Image style={{ width: '100%'}} src={props.thumbnailUrl} alt={props.title} width={200} height={200} />
+    <S.Container onClick={onClick}>
+      <Image
+        style={{ width: '100%'}}
+        src={props.thumbnailUrl}
+        alt={props.title}
+        width={200}
+        height={200}
+      />
       <S.Content>
         <Typography variant="body-default-strong">{props.title}</Typography>
-        <Typography>{props.description}</Typography>
+        <Typography>{props.content}</Typography>
       </S.Content>
-      {/* <Typography>{props.href}</Typography> */}
       <S.Footer>
 
       <Button.Container variant="link">

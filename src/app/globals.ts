@@ -28,4 +28,9 @@ export const GlobalStyles = createGlobalStyle`
   body {
     background-color: var(--background-color);
   }
+
+  a:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px var(--absolute-white);
+  }
 `

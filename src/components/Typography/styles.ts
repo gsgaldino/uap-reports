@@ -54,10 +54,33 @@ const typographyVariantStyles: TypographyParamDictionary = {
     letter-spacing: -0.5px;
     line-height: 124%;
   `,
+  'h3-heavy': css`
+    font-size: 48px;
+    letter-spacing: -0.5px;
+    line-height: 124%;
+    font-weight: 600;
+  `,
   'h4-normal': css`
     font-size: 34px;
     letter-spacing: 0px;
     line-height: 128%;
+  `,
+  'h4-heavy': css`
+    font-size: 34px;
+    letter-spacing: 0px;
+    line-height: 128%;
+    font-weight: 600;
+  `,
+  'h5-normal': css`
+    font-size: 24px;
+    letter-spacing: 0px;
+    line-height: 128%;
+  `,
+  'h5-heavy': css`
+    font-size: 24px;
+    letter-spacing: 0px;
+    line-height: 128%;
+    font-weight: 600;
   `,
   'body-default': css`
     font-size: 16px;
@@ -75,8 +98,6 @@ const typographyVariantStyles: TypographyParamDictionary = {
 export const Container = styled.div.attrs<ITypographyProps>((props) => ({
   as: props.as,
 }))`
-  font-family: 'Archivo', 'Archivo Regular', sans-serif;
-
   ${(props) => typographyVariantStyles[props.variant || 'body-default']}
   ${(props) => typographyColorStyles[props.color || 'light']}
 `

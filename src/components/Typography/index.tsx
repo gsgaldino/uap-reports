@@ -4,7 +4,7 @@ import { type TypographyVariant, Container } from './styles'
 export interface ITypographyProps {
   variant?: TypographyVariant
   as?: string
-  children: string
+  children: string | React.ReactNode
   color?: 'light' | 'dark'
 }
 
