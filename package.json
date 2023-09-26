@@ -12,15 +12,18 @@
     "@types/node": "20.6.1",
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.7",
+    "draft-js": "^0.11.7",
     "eslint": "8.49.0",
     "eslint-config-next": "13.4.19",
     "next": "13.4.19",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-draft-wysiwyg": "^1.15.0",
     "styled-components": "^6.0.8",
     "typescript": "5.2.2"
   },
   "devDependencies": {
+    "@types/react-draft-wysiwyg": "^1.13.4",
     "@types/styled-components": "^5.1.27"
   }
 }

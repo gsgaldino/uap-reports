@@ -1,0 +1,1 @@
+export { FileMiniature } from './FileMiniature'
