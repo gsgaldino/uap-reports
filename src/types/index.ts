@@ -1,1 +1,1 @@
-export { IReport } from './report'
+export type { IReport } from './report'
